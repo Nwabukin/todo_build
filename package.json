@@ -1,5 +1,5 @@
 {
-	"name": "@kazuph/mcp-taskmanager",
+	"name": "todo-build",
 	"version": "2.0.0",
 	"description": "Advanced Model Context Protocol server for Task Management with subtask support, enhanced validation, and hybrid numbering system",
 	"author": "Nwabueze Chigozirim Victor",
@@ -18,9 +18,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/kazuph/mcp-taskmanager.git"
+		"url": "git+https://github.com/Nwabukin/todo_build.git"
 	},
-	"homepage": "https://github.com/kazuph/mcp-taskmanager#readme",
+	"homepage": "https://github.com/Nwabukin/todo_build#readme",
+	"bugs": {
+		"url": "https://github.com/Nwabukin/todo_build/issues"
+	},
 	"keywords": [
 		"taskmanager",
 		"mcp",
