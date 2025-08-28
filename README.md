@@ -5,8 +5,16 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://typescriptlang.org)
 [![Node.js](https://img.shields.io/badge/Node.js-43853D?logo=node.js&logoColor=white)](https://nodejs.org)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-181717?logo=github)](https://github.com/Nwabukin/todo_build)
+[![GitHub Stars](https://img.shields.io/github/stars/Nwabukin/todo_build)](https://github.com/Nwabukin/todo_build/stargazers)
+[![GitHub Forks](https://img.shields.io/github/forks/Nwabukin/todo_build)](https://github.com/Nwabukin/todo_build/forks)
+[![GitHub Issues](https://img.shields.io/github/issues/Nwabukin/todo_build)](https://github.com/Nwabukin/todo_build/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Nwabukin/todo_build)](https://github.com/Nwabukin/todo_build/pulls)
 
-**Built by: Nwabueze Chigozirim Victor**
+**Repository:** [https://github.com/Nwabukin/todo_build](https://github.com/Nwabukin/todo_build)  
+**Built by:** Nwabueze Chigozirim Victor  
+**Version:** 2.0.0  
+**License:** MIT
 
 ## ✨ Features
 
@@ -47,9 +55,9 @@
 ### Installation
 
 ```bash
-# Clone the enhanced repository
-git clone https://github.com/kazuph/mcp-taskmanager.git
-cd mcp-taskmanager
+# Clone the repository
+git clone https://github.com/Nwabukin/todo_build.git
+cd todo_build
 
 # Install dependencies
 npm install
@@ -74,7 +82,7 @@ npm run build
   "mcpServers": {
     "taskmanager": {
       "command": "node",
-      "args": ["/path/to/mcp-taskmanager/dist/index.js"]
+      "args": ["/path/to/todo_build/dist/index.js"]
     }
   }
 }
@@ -382,8 +390,8 @@ Subtasks: Subtask 1, Subtask 2, Subtask 3 (within each task)
 
 ```bash
 # Clone the repository
-git clone https://github.com/kazuph/mcp-taskmanager.git
-cd mcp-taskmanager
+git clone https://github.com/Nwabukin/todo_build.git
+cd todo_build
 
 # Install dependencies
 npm install
@@ -398,14 +406,16 @@ node dist/index.js
 ### Project Structure
 
 ```
-mcp-taskmanager/
-├── src/
-│   └── index.ts          # Main MCP server implementation
+todo_build/
+├── index.ts              # Main MCP server implementation
 ├── dist/                 # Compiled JavaScript output
 ├── package.json          # Project metadata and dependencies
 ├── tsconfig.json         # TypeScript configuration
-├── README.md            # This documentation
-└── test_subtasks.js     # Test script for demonstration
+├── biome.json            # Code formatting configuration
+├── README.md             # This documentation
+├── LICENSE               # MIT license
+├── .gitignore            # Git ignore rules
+└── test_subtasks.js      # Demonstration script
 ```
 
 ### Key Files
@@ -421,18 +431,34 @@ This project is maintained by **Nwabueze Chigozirim Victor**. Contributions are 
 
 ### Ways to Contribute
 
-- 🐛 **Bug Reports** - Report issues via GitHub Issues
-- 💡 **Feature Requests** - Suggest new functionality
-- 🔧 **Code Contributions** - Submit pull requests
+- 🐛 **Bug Reports** - [Report issues](https://github.com/Nwabukin/todo_build/issues) via GitHub Issues
+- 💡 **Feature Requests** - [Suggest new functionality](https://github.com/Nwabukin/todo_build/issues/new?template=feature_request.md)
+- 🔧 **Code Contributions** - Submit pull requests to [https://github.com/Nwabukin/todo_build/pulls](https://github.com/Nwabukin/todo_build/pulls)
 - 📖 **Documentation** - Improve documentation and examples
+- ⭐ **Star the repository** - Show your support!
 
 ### Development Guidelines
 
+1. **Fork the repository** - Create your own fork of [todo_build](https://github.com/Nwabukin/todo_build)
+2. **Create a feature branch** - `git checkout -b feature/amazing-feature`
+3. **Make your changes** following our guidelines
+4. **Test thoroughly** - Ensure all functionality works
+5. **Submit a pull request** - We'll review and merge!
+
+#### Code Standards:
 1. **TypeScript** - All code must be written in TypeScript
 2. **Validation** - Add proper validation for new features
 3. **Error Handling** - Use structured error responses
 4. **Documentation** - Update README for new features
 5. **Testing** - Test new functionality thoroughly
+
+#### Commit Message Format:
+```
+feat: add new subtask filtering functionality
+fix: resolve validation error for empty task content
+docs: update API reference for manage_subtasks tool
+refactor: optimize task completion percentage calculation
+```
 
 ## 📄 License
 
@@ -444,16 +470,48 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Enhanced By**: Nwabueze Chigozirim Victor with advanced features
 - **Community**: Thanks to the MCP and Claude Desktop communities
 
-## 📞 Support
+## 📞 Support & Community
 
 For questions, issues, or contributions:
 
 - 📧 **Email**: Contact Nwabueze Chigozirim Victor
-- 🐛 **Issues**: [GitHub Issues](https://github.com/kazuph/mcp-taskmanager/issues)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/Nwabukin/todo_build/issues) - Report bugs and request features
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/Nwabukin/todo_build/discussions) - Ask questions and share ideas
+- 🔀 **Pull Requests**: [GitHub Pull Requests](https://github.com/Nwabukin/todo_build/pulls) - Submit code contributions
 - 📖 **Documentation**: This README and inline code comments
+- 🌟 **Stars**: Show your support by starring the [repository](https://github.com/Nwabukin/todo_build)!
+
+### 📊 Repository Stats
+- **Stars**: [![GitHub Stars](https://img.shields.io/github/stars/Nwabukin/todo_build)](https://github.com/Nwabukin/todo_build/stargazers)
+- **Forks**: [![GitHub Forks](https://img.shields.io/github/forks/Nwabukin/todo_build)](https://github.com/Nwabukin/todo_build/forks)
+- **Issues**: [![GitHub Issues](https://img.shields.io/github/issues/Nwabukin/todo_build)](https://github.com/Nwabukin/todo_build/issues)
+- **Pull Requests**: [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Nwabukin/todo_build)](https://github.com/Nwabukin/todo_build/pulls)
+
+### 🔗 Quick Links
+- **🏠 Homepage**: [https://github.com/Nwabukin/todo_build](https://github.com/Nwabukin/todo_build)
+- **📋 Issues**: [https://github.com/Nwabukin/todo_build/issues](https://github.com/Nwabukin/todo_build/issues)
+- **🔀 Pull Requests**: [https://github.com/Nwabukin/todo_build/pulls](https://github.com/Nwabukin/todo_build/pulls)
+- **💬 Discussions**: [https://github.com/Nwabukin/todo_build/discussions](https://github.com/Nwabukin/todo_build/discussions)
+- **📚 Wiki**: [https://github.com/Nwabukin/todo_build/wiki](https://github.com/Nwabukin/todo_build/wiki) (if available)
+- **📊 Insights**: [https://github.com/Nwabukin/todo_build/pulse](https://github.com/Nwabukin/todo_build/pulse)
+
+### 🤝 Contributing
+This project welcomes contributions! Please see our [Contributing Guidelines](#-contributing) for details on how to get started.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Original Creator**: kazuph for the initial MCP TaskManager concept
+- **Enhanced By**: Nwabueze Chigozirim Victor with advanced features and production-ready implementation
+- **Community**: Thanks to the MCP and Claude Desktop communities for their inspiration and support
+- **Contributors**: All future contributors who help improve this project
 
 ---
 
 **Built with ❤️ by Nwabueze Chigozirim Victor**
 
 *Transforming task management through intelligent automation and user-centric design.*
+
+**⭐ Don't forget to star the repository if you find it useful!**
+**[https://github.com/Nwabukin/todo_build](https://github.com/Nwabukin/todo_build)**
