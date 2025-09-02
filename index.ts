@@ -364,14 +364,23 @@ const CLEAR_ALL_TASKS_TOOL: Tool = {
 const MANAGE_SUBTASKS_TOOL: Tool = {
   name: "manage_subtasks",
   description:
-    "Create and manage subtasks for complex tasks, similar to todo_write functionality. Supports breaking down tasks, updating status, and tracking completion.\n\n" +
+    "Create and manage subtasks for a task. Use this to break work down, update progress, and keep task completion in sync.\n\n" +
     "Actions:\n" +
-    "- 'create': Add new subtasks to a task\n" +
-    "- 'update': Modify existing subtask content or status\n" +
-    "- 'complete': Mark a subtask as completed\n" +
-    "- 'delete': Remove a subtask\n" +
-    "- 'break_down': Convert a simple task into a task with subtasks\n\n" +
-    "This tool enables granular progress tracking by breaking complex tasks into manageable subtasks.",
+    "- 'create': Add one or more new subtasks to a task (requires 'subtasks')\n" +
+    "- 'update': Modify an existing subtask's content or status (requires 'subtaskId' and 'updates')\n" +
+    "- 'complete': Mark a subtask as completed (requires 'subtaskId')\n" +
+    "- 'delete': Remove a subtask that is not completed (requires 'subtaskId')\n" +
+    "- 'break_down': Replace the task's subtasks with a new list (requires 'subtasks')\n\n" +
+    "Flow & Rules:\n" +
+    "1) Identify the target using 'taskId' (format: req-<n>-task-<m>).\n" +
+    "2) For 'create' and 'break_down', provide 'subtasks' with 'content' (1-500 chars) and optional 'status'. Duplicate content within a task is rejected.\n" +
+    "3) For 'update', provide 'subtaskId' and 'updates' (content and/or status). Status changes are validated; direct pending → completed is allowed to minimize calls.\n" +
+    "4) For 'complete', provide 'subtaskId'. The subtask is marked completed and timestamped.\n" +
+    "5) For 'delete', provide 'subtaskId'. Completed subtasks cannot be deleted.\n" +
+    "6) After any action, the task's 'completionPercentage' is recalculated. Responses include helpful fields like display numbers and remaining counts when relevant.\n\n" +
+    "Notes:\n" +
+    "- All inputs are validated with clear error codes/messages.\n" +
+    "- To mark a parent task done, all its subtasks must be completed (see 'mark_task_done').",
   inputSchema: {
     type: "object",
     properties: {
@@ -937,7 +946,7 @@ class TaskManagerServer {
 
   private validateStatusTransition(currentStatus: string, newStatus: string): boolean {
     const validTransitions: Record<string, string[]> = {
-      'pending': ['in_progress', 'cancelled'],
+      'pending': ['in_progress', 'completed', 'cancelled'],
       'in_progress': ['completed', 'pending', 'cancelled'],
       'completed': ['pending'], // Allow reopening completed tasks
       'cancelled': ['pending']  // Allow restarting cancelled tasks
@@ -954,7 +963,7 @@ class TaskManagerServer {
 
   private getValidTransitions(currentStatus: string): string[] {
     const validTransitions: Record<string, string[]> = {
-      'pending': ['in_progress', 'cancelled'],
+      'pending': ['in_progress', 'completed', 'cancelled'],
       'in_progress': ['completed', 'pending', 'cancelled'],
       'completed': ['pending'], // Allow reopening completed tasks
       'cancelled': ['pending']  // Allow restarting cancelled tasks
